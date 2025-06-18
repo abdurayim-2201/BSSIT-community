@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSSIT COMMUNITY - Buxoro IT Jamiyati</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0026A0',
+                        secondary: '#0038D4',
+                        accent: '#00A0FF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 38, 160, 0.8), rgba(0, 38, 160, 0.9)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .team-card:hover .team-overlay {
+            opacity: 1;
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-primary text-white">
+    <!-- Navbar -->
+    <nav class="bg-primary fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                  <img src="bssit.jpg" alt="" width="60" height="60">
+                    <a href="#" class="text-white text-xl font-bold">BSSIT COMMUNITY</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-accent transition">Bosh sahifa</a>
+                    <a href="#about" class="text-white hover:text-accent transition">BSSIT haqida</a>
+                    <a href="#team" class="text-white hover:text-accent transition">Bizning jamoa</a>
+                    <a href="#projects" class="text-white hover:text-accent transition">Loyihalar</a>
+                    <a href="#sponsors" class="text-white hover:text-accent transition">Homiylik</a>
+                    <a href="#contact" class="text-white hover:text-accent transition">Bog'lanish</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <a href="#home" class="block py-2 text-white hover:bg-secondary px-2 rounded">Bosh sahifa</a>
+                <a href="#about" class="block py-2 text-white hover:bg-secondary px-2 rounded">BSSIT haqida</a>
+                <a href="#team" class="block py-2 text-white hover:bg-secondary px-2 rounded">Jamoa</a>
+                <a href="#projects" class="block py-2 text-white hover:bg-secondary px-2 rounded">Loyihalar</a>
+                <a href="#sponsors" class="block py-2 text-white hover:bg-secondary px-2 rounded">Homiylik</a>
+                <a href="#contact" class="block py-2 text-white hover:bg-secondary px-2 rounded">Bog'lanish</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">BSSIT communityning rasmiy saytiga xush kelibsiz!</h1>
+                <p class="text-xl md:text-2xl mb-8">Biz bilan birga texnologiyalar dunyosiga qadam qo'ying. Yangi bilimlar, loyihalar va hamkorlik imkoniyatlari sizni kutmoqda.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#about" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Ko'proq bilib oling</a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition duration-300">Qo'shiling</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">BSSIT Haqida</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="BSSIT Team" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">BSSIT COMMUNITY - Buxoroning IT Kelajagi</h3>
+                    <p class="mb-4">BSSIT COMMUNITY - Buxoro ixtisoslashtirilgan maktabining IT sohasida faoliyat yurituvchi yoshlar jamoasi. Bizning maqsadimiz - yoshlarni zamonaviy texnologiyalar bilan tanishtirish, ularga bilim va ko'nikmalar berish hamda amaliy loyihalarda ishtirok etish imkoniyatini yaratish.</p>
+                    <p class="mb-6">2018-yildan beri faoliyat yuritib kelayotgan jamiyatimizda hozirgacha 100 dan ortiq yosh dasturchilar, dizaynerlar va IT mutaxassislar tayyorlangan.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-primary p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-bullseye text-accent mr-2"></i>
+                                <h4 class="font-bold">Vazifamiz</h4>
+                            </div>
+                            <p>Yoshlarni IT sohasida qobiliyatlarini oshirish va ularga professional yo'nalish berish.</p>
+                        </div>
+                        <div class="bg-primary p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-star text-accent mr-2"></i>
+                                <h4 class="font-bold">Maqsadimiz</h4>
+                            </div>
+                            <p>Buxoroda IT sohasida professional kadrlar tayyorlash va ularni ish bilan ta'minlash.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Jamoa A'zolari</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Bizning jamoamiz tajribali mutaxassislar va istiqbolli yosh dasturchilardan iborat</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-secondary rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300">
+                            <div class="text-center p-4">
+                                <p class="text-sm">Dasturlash bo'yicha 5 yillik tajriba. Python, JavaScript mutaxassisi.</p>
+                                <div class="flex justify-center mt-4 space-x-4">
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-telegram"></i></a>
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl">Azizbek Ismoilov</h3>
+                        <p class="text-accent">Rahbar & Senior Dasturchi</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-secondary rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300">
+                            <div class="text-center p-4">
+                                <p class="text-sm">UI/UX dizayn bo'yicha mutaxassis. Adobe XD, Figma ustasi.</p>
+                                <div class="flex justify-center mt-4 space-x-4">
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-telegram"></i></a>
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-behance"></i></a>
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-dribbble"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl">Dilfuza Rahimova</h3>
+                        <p class="text-accent">Bosh Dizayner</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-secondary rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300">
+                            <div class="text-center p-4">
+                                <p class="text-sm">Mobile ilovalar bo'yicha mutaxassis. Flutter va React Native ustasi.</p>
+                                <div class="flex justify-center mt-4 space-x-4">
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-telegram"></i></a>
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl">Javohir Toshpulatov</h3>
+                        <p class="text-accent">Mobile Dasturchi</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-secondary rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Team Member" class="w-full h-64 object-cover">
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300">
+                            <div class="text-center p-4">
+                                <p class="text-sm">Backend dasturlash bo'yicha mutaxassis. Node.js va Django ustasi.</p>
+                                <div class="flex justify-center mt-4 space-x-4">
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-telegram"></i></a>
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="text-white hover:text-accent"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-xl">Sevara Karimova</h3>
+                        <p class="text-accent">Backend Dasturchi</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition duration-300">Barcha Jamoa A'zolari</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Loyihalarimiz</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Bizning jamoamiz tomonidan ishlab chiqilgan va ishlab chiqilayotgan loyihalar</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-primary rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300">
+                            <a href="#" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition">Batafsil</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">Buxoro Smart Edu</h3>
+                            <span class="bg-accent text-xs text-white px-2 py-1 rounded-full">Yakunlangan</span>
+                        </div>
+                        <p class="text-sm mb-4">Buxoro shahridagi maktablar uchun aqlli ta'lim platformasi. Platforma orqali o'quvchilar va o'qituvchilar o'rtasida interfaol aloqa yo'lga qo'yilgan.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">Web</span>
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">Django</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-primary rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1403&q=80" alt="Project" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300">
+                            <a href="#" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition">Batafsil</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">TourUz Mobile</h3>
+                            <span class="bg-yellow-500 text-xs text-white px-2 py-1 rounded-full">Jarayonda</span>
+                        </div>
+                        <p class="text-sm mb-4">O'zbekiston bo'ylab sayyohlik qilish uchun mobil ilova. Barcha diqqatga sazovor joylar, mehmonxonalar va transport xizmatlari haqida to'liq ma'lumot.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">Mobile</span>
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">Flutter</span>
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-primary rounded-lg overflow-hidden shadow-lg card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="Project" class="w-full h-48 object-cover">
+                        <div class="project-overlay absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 transition duration-300">
+                            <a href="#" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition">Batafsil</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-xl">AgroStat Analytics</h3>
+                            <span class="bg-green-500 text-xs text-white px-2 py-1 rounded-full">Yangi</span>
+                        </div>
+                        <p class="text-sm mb-4">Qishloq xo'jaligi korxonalari uchun statistika va analitika platformasi. Ekin maydonlari monitoringi, hosildorlik prognozlari va bozor tahlillari.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">Web</span>
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">Node.js</span>
+                            <span class="bg-white bg-opacity-10 text-xs px-3 py-1 rounded-full">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-accent text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition duration-300">Barcha Loyihalar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="py-20 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Bizni Qo'llab-Quvvatlang</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Siz ham Buxoroda IT sohasini rivojlantirishga hissa qo'shishingiz mumkin</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-secondary rounded-lg p-8 shadow-lg">
+                <h3 class="text-2xl font-bold mb-6">Homiylik Qilish Formasi</h3>
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block mb-2">Ismingiz</label>
+                            <input type="text" id="name" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Elektron Pochta</label>
+                            <input type="email" id="email" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div>
+                            <label for="company" class="block mb-2">Tashkilot Nomi (ixtiyoriy)</label>
+                            <input type="text" id="company" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-2">Telefon Raqam</label>
+                            <input type="tel" id="phone" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="support" class="block mb-2">Qo'llab-quvvatlash turi</label>
+                        <select id="support" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                            <option value="">Tanlang...</option>
+                            <option value="financial">Moliyaviy yordam</option>
+                            <option value="equipment">Texnika ta'minlash</option>
+                            <option value="mentorship">Mentorlik</option>
+                            <option value="other">Boshqa</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2">Xabaringiz</label>
+                        <textarea id="message" rows="4" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300">Yuborish</button>
+                </form>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-bold mb-6">Bizning Homiylarimiz</h3>
+                <div class="flex flex-wrap justify-center items-center gap-8">
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <img src="https://via.placeholder.com/150x60?text=Company+1" alt="Sponsor" class="h-12">
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <img src="https://via.placeholder.com/150x60?text=Company+2" alt="Sponsor" class="h-12">
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <img src="https://via.placeholder.com/150x60?text=Company+3" alt="Sponsor" class="h-12">
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+                        <img src="https://via.placeholder.com/150x60?text=Company+4" alt="Sponsor" class="h-12">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Aloqa</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Biz bilan bog'laning va BSSIT COMMUNITY jamoasiga qo'shiling</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">Biz Bilan Bog'laning</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Manzil</h4>
+                                <p>Buxoro shahri, M. Iqbol ko'chasi, 11-uy</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Telefon</h4>
+                                <p>+998 90 123 45 67</p>
+                                <p>+998 71 234 56 78</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Elektron Pochta</h4>
+                                <p>info@bssit.uz</p>
+                                <p>support@bssit.uz</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Ish Vaqti</h4>
+                                <p>Dushanba - Juma: 09:00 - 18:00</p>
+                                <p>Shanba - Yakshanba: Dam olish kuni</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Ijtimoiy Tarmoqlar</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-primary p-3 rounded-full hover:bg-opacity-80 transition">
+                                <i class="fab fa-telegram text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-primary p-3 rounded-full hover:bg-opacity-80 transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-primary p-3 rounded-full hover:bg-opacity-80 transition">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-primary p-3 rounded-full hover:bg-opacity-80 transition">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-primary p-3 rounded-full hover:bg-opacity-80 transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">Xabar Yuborish</h3>
+                    <form>
+                        <div class="mb-6">
+                            <label for="contact-name" class="block mb-2">Ismingiz</label>
+                            <input type="text" id="contact-name" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="contact-email" class="block mb-2">Elektron Pochta</label>
+                            <input type="email" id="contact-email" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="contact-subject" class="block mb-2">Mavzu</label>
+                            <input type="text" id="contact-subject" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="contact-message" class="block mb-2">Xabar</label>
+                            <textarea id="contact-message" rows="5" class="w-full bg-primary border border-white border-opacity-30 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-accent text-white py-3 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300">Xabar Yuborish</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary py-12 border-t border-white border-opacity-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-laptop-code text-2xl text-white"></i>
+                        <span class="text-white text-xl font-bold">BSSIT COMMUNITY</span>
+                    </div>
+                    <p class="mb-4">Buxoroning IT sohasidagi yetakchi yoshlar jamoasi. Biz bilan birga texnologiyalar dunyosiga qadam qo'ying.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="text-white hover:text-accent"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-accent"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Tezkor Havolalar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-accent transition">Bosh sahifa</a></li>
+                        <li><a href="#about" class="hover:text-accent transition">Jamiyat haqida</a></li>
+                        <li><a href="#team" class="hover:text-accent transition">Jamoa a'zolari</a></li>
+                        <li><a href="#projects" class="hover:text-accent transition">Loyihalarimiz</a></li>
+                        <li><a href="#sponsors" class="hover:text-accent transition">Homiylik</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Loyihalar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent transition">Buxoro Smart Edu</a></li>
+                        <li><a href="#" class="hover:text-accent transition">TourUz Mobile</a></li>
+                        <li><a href="#" class="hover:text-accent transition">AgroStat Analytics</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Barcha loyihalar</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Yangiliklar</h4>
+                    <p>Eng so'nggi yangiliklar va tadbirlar haqida xabardor bo'lish uchun obuna bo'ling.</p>
+                    <div class="mt-4 flex">
+                        <input type="email" placeholder="Email manzilingiz" class="bg-white bg-opacity-10 text-white px-4 py-2 rounded-l-lg focus:outline-none w-full">
+                        <button class="bg-accent px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
+                <p>&copy; 2023 BSSIT COMMUNITY. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
